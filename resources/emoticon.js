@@ -3,8 +3,8 @@ var EmoticonAdv = {
 	showDropDown: function(id){
 		this.activeTextAreaId = id;
 		buttonPosition = $("#"+id+" .formattingButtons .emoticon").offset();
-		$("#emoticonDropDown").css( { 
-					left: buttonPosition.left, 
+		$("#emoticonDropDown").css( {
+					left: buttonPosition.left,
 					top: buttonPosition.top+6
 			} );
 

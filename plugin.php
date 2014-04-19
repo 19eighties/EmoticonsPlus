@@ -5,7 +5,7 @@ if (!defined("IN_ESOTALK")) exit;
 ET::$pluginInfo["EmoticonsPlus"] = array(
 	"name" => "EmoticonsPlus",
 	"description" => "Extends Emoticons plugin with an add emoticon button on the formatting toolbar.",
-	"version" => "1.0",
+	"version" => "1.0.1",
 	"author" => "Ramouch0",
 	"authorEmail" => "support@esotalk.org",
 	"authorURL" => "http://esotalk.org",
@@ -116,11 +116,6 @@ public function handler_conversationController_renderBefore($sender)
 {
 	$sender->addJSFile($this->getResource("emoticon.js"));
 	$sender->addCSSFile($this->getResource("emoticon.css"));
-}
-
-public function handler_memberController_renderBefore($sender)
-{
-	$this->handler_conversationController_renderBefore($sender);
 }
 
 public function handler_pageEnd(){
