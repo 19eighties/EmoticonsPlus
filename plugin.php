@@ -114,8 +114,8 @@ public function handler_conversationController_getEditControls($sender, &$contro
 
 public function handler_conversationController_renderBefore($sender)
 {
-	$sender->addJSFile($this->getResource("emoticon.js"));
-	$sender->addCSSFile($this->getResource("emoticon.css"));
+	$sender->addJSFile($this->resource("emoticon.js"));
+	$sender->addCSSFile($this->resource("emoticon.css"));
 }
 
 public function handler_pageEnd(){
