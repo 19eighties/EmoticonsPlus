@@ -11,7 +11,7 @@ var EmoticonAdv = {
 		$("#emoticonDropDown").fadeIn();
 	},
 	hideDropDown: function(){
-		$("#emoticonDropDown").fadeOut();
+		$("#emoticonDropDown").hide();
 
 	},
 	insertSmiley : function(smiley){
@@ -25,6 +25,12 @@ $(function(){
 		$("#emoticonDropDown").bind("mouseleave",function(){
 			EmoticonAdv.hideDropDown();
 		});
+		$(document).click(function(){
+			EmoticonAdv.hideDropDown();
+		});			
+		$("#emoticonDropDown").click(function(){
+			EmoticonAdv.hideDropDown();
+		});		
 		$("#emoticonDropDown *").click(function(event){
 			event.stopPropagation(); //this is needed to prevent the reply area to collapse on click outside it
 		});
